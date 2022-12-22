@@ -1,0 +1,199 @@
+:root {
+  --img-size-pinas: 200px;
+  font-family: "Mountains of Christmas", cursive;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  position: relative;
+
+  min-width: 300px;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #004a63;
+  background-image: url("/fondo.jpg");
+  background-size: cover;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+::selection {
+  color: red;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 5rem;
+  font-weight: 700;
+  text-align: center;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+span {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  max-width: 1000px;
+  display: block;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 700;
+  text-align: center;
+  display: block;
+}
+
+.pina--bolas {
+  display: flex;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.buttons--music {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.buttons--music > button {
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.pina--bolas > .lf-player-container:hover {
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}
+
+.container--music {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  height: 100%;
+}
+
+.nieve--container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.nieve--container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: bottom;
+  margin: 0;
+  padding: 0;
+}
+
+.pina--bailando {
+  width: 200px;
+  display: inline-block;
+}
+
+.lf-player-container {
+  margin: 0 auto;
+}
+
+.pina--logo {
+  width: 120px;
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
+.pina--logo:hover {
+  animation: bounce 1s infinite;
+}
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 10px;
+    line-height: 20px;
+  }
+
+  .pina--logo {
+    width: 60px;
+  }
+
+  h1 {
+    line-height: 5rem;
+  }
+
+  span {
+    line-height: 1.5rem;
+  }
+
+  .pina--bolas > .lf-player-container {
+    display: none;
+  }
+
+  .pina--bolas > .lf-player-container:nth-child(1) {
+    display: block;
+  }
+
+  .nieve--container > img {
+    object-fit: cover;
+    width: auto;
+  }
+}
